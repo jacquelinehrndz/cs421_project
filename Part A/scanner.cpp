@@ -41,8 +41,28 @@ bool word(string s) {
 }
 
 // PERIOD DFA
-// Done by: **
+// Done by: Jackie/team
 bool period(string s) { // complete this **
+    int state = 0;
+    int charpos = 0;
+
+    while(s[charpos] != '\0')
+        {
+            if(state == 0 && s[charpos] == '.')
+            {
+                state = 1;
+            }
+            else
+            { 
+                cout << "Period DFA is stuck on state" << state << endl;
+                return false;
+            }
+            charpos++
+        }
+    if(state == 1)
+        return true;
+    else
+        return false;
 }
 
 // ------ Three  Tables -------------------------------------
